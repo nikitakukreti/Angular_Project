@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Angular Learning</title>
+    <style>
+      p{
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+        <p>view-emp works!</p>
+      </div>
+      
+      <h3>Employee Details</h3>
+      <p>Id: {{emp.id}}</p>
+      <p>Name: {{emp.name}}</p>
+      <p>Salary: {{emp.salary|currency:"INR"}}</p>
+      <p *ngIf="emp.permanent">Permanent: {{emp.permanent}}</p>
+      <p>Department Id: {{emp.department.department_id}}</p>
+      <p id="departmentName">Department Name: {{emp.department.department_name}}</p>
+      <p>Skills</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Skills Id</th>
+            <th>Skills Name</th>
+          </tr>
+          <tr *ngFor="let s of emp.skills">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+          </tr>
+        </thead>
+      </table>
+      <p>Date Of Birth: {{emp.dateOfBirth}}</p>
+  </body>
+</html>

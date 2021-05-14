@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Angular Learning</title>
+    <style>
+      body { 
+        font-family: Segoe UI, Arial} 
+
+      a:visited { 
+        color: blue } 
+
+      a { 
+        text-decoration: none } 
+
+      .active { 
+        border-bottom: Solid 1px blue }
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <span>{{ title }} app is running!</span>
+      </div>
+      <h1>Favorite Movie: {{favoriteMovie}}</h1>
+      <p id="departmentName">Department Name: {{emp.department.department_name}}</p>
+      <hr>
+      
+      <a routerLink="/view-emp" routerLinkActive="active">View Employee </a>
+      <a routerLink="/edit-emp" routerLinkActive="active"> Edit Employee</a>
+      <a routerLink="/qnt" routerLinkActive="active"> Quantity Increment</a>
+  </body>
+</html>
+
+<router-outlet></router-outlet>
